@@ -1,3 +1,8 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
@@ -7,3 +12,146 @@
     font-weight: <400>;
     font-style: normal;
   }
+
+
+/* shared style */
+.display-flex{
+    display: flex;
+}
+
+/* dark 01 */
+.text-gray{
+    color: #424242;
+}
+
+/* dark 02 */
+.text-light-gray{
+    color: #727272; 
+}
+
+.bg-light{
+    background-color: rgba(255, 144, 14, 0.1);
+}
+.btn-primary{
+    background-color: #FF900E;
+    color: white;
+    padding: 20px 25px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+main > section{
+    margin-top: 130px;
+}
+
+/* teams and feature related style */
+
+.teams{
+    align-items: center;
+    justify-content: center;
+}
+.team-img-container{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 24px;
+
+}
+.team-img-container img{
+    width: 100%;
+}
+.our-feature{
+    width: 50%;
+    margin-left: 100px;
+}
+.feature-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+#quick-list{
+   font-weight: 500;
+}
+#ql-feature{
+    color: rgb(255, 144, 14);
+
+}
+/* header styles */
+
+
+/* navbar related styles */
+
+.navbar{
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+
+}
+.nav-items{
+    list-style: none;
+    margin-right: 30px;
+}
+.nav-link{
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+.navbar, .banner{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.brand{
+    font-weight: 700;
+    font-size: 2.8rem;
+
+}
+.banner-image {
+    width: 100%;
+}
+.banner-content {
+    width: 60%;
+    height: 225px;
+    margin: 0 auto;
+    text-align: center;
+    height: auto;
+    margin-bottom: 50px;
+}
+.banner-title{
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+/* responsive media query */
+
+@media screen and (max-width: 576px){
+    .navbar, 
+    .nav-links,
+    .teams
+    {
+        flex-direction: column;
+
+    }
+    .banner-content, .banner-title{
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+    }
+    .team-img-container {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+    .our-feature{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        padding: 0 25px;
+    }
+}
